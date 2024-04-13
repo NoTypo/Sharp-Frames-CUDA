@@ -1,0 +1,9 @@
+# Sharp-Frames-CUDA
+
+Uses ffmpeg to read frames and laplacian variance on the GPU to extract sharp frames from video.
+
+Simple compilation:
+nvcc -o main main.cu -arch=sm_50 -I/usr/local/include -L/usr/local/lib -lavformat -lavcodec -lswscale -lavutil
+
+Usage:
+./main video.MOV
